@@ -1,0 +1,5 @@
+def missing_effect(dataset, X, y):
+    corpus = []
+    for col in X:
+        corpus.append(data.loc[data[col].isnull()][y].mean())
+    return corpus
